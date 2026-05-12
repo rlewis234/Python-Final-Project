@@ -2,6 +2,7 @@
 
 import file_manager
 from operator import attrgetter
+from openpyxl import Workbook
 
 def find_low_stock():
     '''Finds products that are low on stock(below or at the reorder level)'''
@@ -33,7 +34,7 @@ def total_inventory_val():
         product_vals.append(prod_val)
     
     total_val = sum(product_vals)
-    print(f"Total Inventory Value: ${total_val:.2f}")
+    return total_val
 
 def show_sorted_prodcut():
     '''Shows Information about products in a sorted layout'''
@@ -187,3 +188,37 @@ def show_order(po_number=None):
             print(f"Total Cost: {o.total_cost}")
             print(f"Status: {o.status}")
             print("-" * 30)
+
+def export_products_excel():
+    '''Exports Product data into a excel spreadsheet'''
+
+    workbook = Workbook()
+    sheet = workbook.active
+    sheet.title = "Products"
+    total_val = total_inventory_val()
+
+    sheet.append(["Product Name", "Product ID", "Category", "Amount in Stock", "Reorder Level", "Reorder Quantity", "Price", "Vendor ID", "Status"])
+
+    for product in file_manager.products.values():
+        sheet.append([product.name, product.product_id, product.category, product.quantity, product.reorder_level, product.reorder_quantity, product.price, product.vendor_id, product.status])
+    
+    sheet.append([])
+    sheet.append(["Total Inventory Val", total_val])
+
+    workbook.save("products.xlsx")
+    print("Data exported to products.xlsx")
+
+def export_vendors_excel():
+    '''Exports Vendor data into an excel spreadsheet'''
+
+    workbook = Workbook()
+    sheet = workbook.active
+    sheet.title = "Vendors"
+
+    sheet.append(["Vendor Name", "Vendor ID", "Contact Name", "Phonenumber", "Email", "Address"])
+
+    for vendor in file_manager.vendors.values():
+        sheet.append([vendor.vendor_name, vendor.vendor_id, vendor.contact_name, vendor.phone, vendor.email, vendor.address])
+    
+    workbook.save("vendors.xlsx")
+    print("Data exported to vendors.xlsx")
