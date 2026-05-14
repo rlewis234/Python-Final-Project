@@ -35,7 +35,7 @@ def main():
         elif user_choice == 4:
             manage_reports()
         elif user_choice == 5:
-            print("Placeholder Text")
+            manage_spreadsheets()
         elif user_choice == 6:
             break
 
@@ -47,8 +47,7 @@ def manage_products():
         print("2. Search for Product")
         print("3. View all Products")
         print("4. Edit Product")
-        print("5. Check Stock of Product")
-        print("6. Exit")
+        print("5. Exit")
 
         user_input = input("\nPlease select an option: ")
         try:
@@ -137,7 +136,7 @@ def manage_reports():
         print("4. Total Inventory Value")
         print("5. Open Orders")
         print("6. Orders sorted by date")
-        print("7.. Exit")
+        print("7. Exit")
 
         user_input = input("\nPlease select an option: ")
         try:
@@ -158,7 +157,28 @@ def manage_reports():
             reports.open_orders()
         elif user_choice == 6:
             reports.show_sorted_order()
-        elif user_choice == 8:
+        elif user_choice == 7:
+            break
+
+# -------------------- Spreadsheet Management --------------------
+def manage_spreadsheets():
+    while True:
+        print("1. Export Product data to excel")
+        print("2. Export Vendor data to excel")
+        print("3. Exit")
+
+        user_input = input("\nPlease select an option: ")
+        try:
+            user_choice = int(user_input)
+        except ValueError:
+            print("Invalid input please enter a number")
+        if user_choice <= 0 or user_choice > 3:
+            print("Invalid Input, Input must be 1-3")
+        elif user_choice == 1:
+            reports.export_products_excel()
+        elif user_choice == 2:
+            reports.export_vendors_excel()
+        elif user_choice == 3:
             break
 
 if __name__ == '__main__':
