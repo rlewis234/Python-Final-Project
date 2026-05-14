@@ -1,0 +1,50 @@
+{
+    "V001": {
+        "vendor_id": "V001",
+        "name": "General Electronics",
+        "contact_name": "Even Electron",
+        "phone": "217-664-9999",
+        "email": "generalelctronicssales@gmail.com",
+        "address": "4871 Eastpoint drive Fiction City"
+    },
+    "V002": {
+        "vendor_id": "V002",
+        "name": "Ukea",
+        "contact_name": "Billy Builder",
+        "phone": "217-343-9806",
+        "email": "ukeacorpate@gmail.com",
+        "address": "3241 Wespoint Ave Fiction City"
+    },
+    "V003": {
+        "vendor_id": "V003",
+        "name": "Paperclips",
+        "contact_name": "Ollie Office",
+        "phone": "363-875-6473",
+        "email": "paperclipssupply@gmail.com",
+        "address": "4675 Jackson St Fable City"
+    },
+    "V004": {
+        "vendor_id": "V004",
+        "name": "Martianware",
+        "contact_name": "Allie Accessory",
+        "phone": "363-789-0231",
+        "email": "martianware@gmail.com",
+        "address": "3465 Batson Ave Fable City"
+    },
+    "V005": {
+        "vendor_id": "V005",
+        "name": "Bepsi",
+        "contact_name": "Sam Snackie",
+        "phone": "217-123-9670",
+        "email": "bepsico@gmail.com",
+        "address": "4879 Eastpoint drive Fiction City"
+    },
+    "V006": {
+        "vendor_id": "V006",
+        "name": "Gogitech",
+        "contact_name": "Allen Smith",
+        "phone": "665-657-7676",
+        "email": "gogitechsupport@gmail.com",
+        "address": "3451 Titan Ave Night City"
+    }
+}

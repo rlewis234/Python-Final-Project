@@ -1,0 +1,14 @@
+{
+    "PO001": {
+        "ponumber": "PO001",
+        "vendor_id": "V001",
+        "date_created": "9/10/2026",
+        "ids_ordered": [
+            "P001",
+            "P002"
+        ],
+        "items_ordered": 20,
+        "total_cost": 2000,
+        "status": "Ordered"
+    }
+}

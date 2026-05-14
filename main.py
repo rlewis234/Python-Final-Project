@@ -9,6 +9,7 @@ file_manager.initialize_vendors()
 file_manager.initialize_orders()
 
 def main():
+    '''Handles main system interface, user inputs number and relating process is called'''
     while True:
         print("Inventory Managent System")
         print("1. Manage Products")
@@ -34,12 +35,13 @@ def main():
         elif user_choice == 4:
             manage_reports()
         elif user_choice == 5:
-            manage_spreadsheets()
+            print("Placeholder Text")
         elif user_choice == 6:
             break
 
 # -------------------- Product Management --------------------
 def manage_products():
+    '''Product management interface, user inputs number and relating process is called'''
     while True:
         print("1. Create Product")
         print("2. Search for Product")
@@ -68,6 +70,7 @@ def manage_products():
 
 # -------------------- Vendor Management --------------------
 def manage_vendors():
+    '''Vendor management interface, user inputs number and relating process is called'''
     while True:
         print("1. Create Vendor")
         print("2. Search for Vendor")
@@ -96,6 +99,7 @@ def manage_vendors():
 
 # -------------------- Purchase Order Management --------------------
 def manage_orders():
+    '''Purchase Order management interface, user inputs number and relating process is called'''
     while True:
         print("\n1. Create Order")
         print("2. Search for Order")
@@ -124,6 +128,7 @@ def manage_orders():
 
 # -------------------- Report Management --------------------
 def manage_reports():
+    '''Report management interface, user inputs number and relating process is called'''
     while True:
         print("\n1. Low Stock Items")
         print("2. Out of Stock Items")
@@ -147,34 +152,12 @@ def manage_reports():
         elif user_choice == 3:
             reports.show_sorted_prodcut()
         elif user_choice == 4:
-            total_val = reports.total_inventory_val()
-            print(f"Total Inventory Value: ${total_val:.2f}")
+            reports.total_inventory_val()
         elif user_choice == 5:
             reports.open_orders()
         elif user_choice == 6:
             reports.show_sorted_order()
         elif user_choice == 7:
-            break
-
-# -------------------- Spreadsheet Management --------------------
-def manage_spreadsheets():
-    while True:
-        print("1. Export Product data to excel")
-        print("2. Export Vendor data to excel")
-        print("3. Exit")
-
-        user_input = input("\nPlease select an option: ")
-        try:
-            user_choice = int(user_input)
-        except ValueError:
-            print("Invalid input please enter a number")
-        if user_choice <= 0 or user_choice > 3:
-            print("Invalid Input, Input must be 1-3")
-        elif user_choice == 1:
-            reports.export_products_excel()
-        elif user_choice == 2:
-            reports.export_vendors_excel()
-        elif user_choice == 3:
             break
 
 if __name__ == '__main__':

@@ -197,6 +197,7 @@ def edit_product():
     print(f"\nProduct {product_id} updated successfully.")
 
 def check_product_id(product_id):
+    '''Checks to see if a product with inputed id already exist'''
     for product in file_manager.products:
         if product == product_id:
             return True
@@ -317,6 +318,7 @@ def edit_vendor():
     print(f"\nVendor {vendor_id} updated successfully.")
 
 def check_vendor_id(vendor_id):
+    '''Checks to see if a vendor with inputed id already exist'''
     for vendor in file_manager.vendors:
         if vendor == vendor_id:
             return True
@@ -350,6 +352,8 @@ def create_order():
                 print(f"Invalid Input, no product with the id {order_item_id} exists")
             elif file_manager.products[order_item_id].vendor_id != vendor_id:
                 print(f"Product {order_item_id} dose not belong to vendor {vendor_id}")
+            elif file_manager.products[order_item_id].status == "Inactive":
+                print(f"Product {order_item_id} is inactive and can not be ordered")
             else:
                 ordered_items.append(order_item_id)
                 user_choice = input("Order another item?(n to stop): ")
@@ -396,6 +400,7 @@ def recive_order():
         print(f"Order {order_recived} does not exists")
 
 def check_ponumber(ponumber):
+    '''Checks to see if an order with inputed po number already exist'''
     for order in file_manager.orders:
         if order == ponumber:
             return True
