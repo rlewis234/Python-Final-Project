@@ -374,6 +374,8 @@ def create_order():
         user_confirm = input("Are order details correct?(y to confirm): ")
         if user_confirm == 'y':
             break
+        else:
+            ordered_items = []
     
     # Saves the order to the purchaseorders.json file
     order = PurchaseOrder(ponumber, vendor_id, date_created, ordered_items, items_ordered, total_cost, status)
