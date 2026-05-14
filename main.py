@@ -47,7 +47,8 @@ def manage_products():
         print("2. Search for Product")
         print("3. View all Products")
         print("4. Edit Product")
-        print("5. Exit")
+        print("5. Check Stock of Product")
+        print("6. Exit")
 
         user_input = input("\nPlease select an option: ")
         try:
@@ -136,7 +137,7 @@ def manage_reports():
         print("4. Total Inventory Value")
         print("5. Open Orders")
         print("6. Orders sorted by date")
-        print("7. Exit")
+        print("7.. Exit")
 
         user_input = input("\nPlease select an option: ")
         try:
@@ -157,7 +158,7 @@ def manage_reports():
             reports.open_orders()
         elif user_choice == 6:
             reports.show_sorted_order()
-        elif user_choice == 7:
+        elif user_choice == 8:
             break
 
 if __name__ == '__main__':

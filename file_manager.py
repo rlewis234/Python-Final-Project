@@ -50,7 +50,14 @@ DEFAULT_VENDORS = [
 ]
 
 DEFAULT_ORDERS = [
-    PurchaseOrder("PO001", "V001", "9/10/2026", ["P001", "P002"], 20, 2000, "Ordered"),
+    PurchaseOrder("PO001", "V001", "05-10-2026", ["P001", "P002"], 20, 2000, "Ordered"),
+    PurchaseOrder("PO002", "V001", "05-10-2026", ["P006"], 15, 180.0, "Ordered"),
+    PurchaseOrder("PO003", "V004", "05-11-2026", ["P017", "P016", "P017", "P016"], 260, 30.0, "Ordered"),
+    PurchaseOrder("PO004", "V005", "05-11-2026", ["P020", "P021", "P022"], 105, 10.97, "Ordered"),
+    PurchaseOrder("PO005", "V006", "05-11-2026", ["P025"], 15, 70.0, "Ordered"),
+    PurchaseOrder("PO006", "V002", "05-12-2026", ["P010", "P009"], 15, 430.0, "Ordered"),
+    PurchaseOrder("PO007", "V003", "05-12-2026", ["P011"], 60, 22.0, "Ordered"),
+    PurchaseOrder("PO008", "V002", "05-13-2026", ["P008", "P007"], 20, 270.0, "Ordered"),
 ]
 
 # -------------------- Products --------------------

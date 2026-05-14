@@ -2,13 +2,97 @@
     "PO001": {
         "ponumber": "PO001",
         "vendor_id": "V001",
-        "date_created": "9/10/2026",
+        "date_created": "05-10-2026",
         "ids_ordered": [
             "P001",
             "P002"
         ],
         "items_ordered": 20,
         "total_cost": 2000,
+        "status": "Ordered"
+    },
+    "PO002": {
+        "ponumber": "PO002",
+        "vendor_id": "V001",
+        "date_created": "05-10-2026",
+        "ids_ordered": [
+            "P006"
+        ],
+        "items_ordered": 15,
+        "total_cost": 180.0,
+        "status": "Ordered"
+    },
+    "PO003": {
+        "ponumber": "PO003",
+        "vendor_id": "V004",
+        "date_created": "05-11-2026",
+        "ids_ordered": [
+            "P017",
+            "P016",
+            "P017",
+            "P016"
+        ],
+        "items_ordered": 260,
+        "total_cost": 30.0,
+        "status": "Ordered"
+    },
+    "PO004": {
+        "ponumber": "PO004",
+        "vendor_id": "V005",
+        "date_created": "05-11-2026",
+        "ids_ordered": [
+            "P020",
+            "P021",
+            "P022"
+        ],
+        "items_ordered": 105,
+        "total_cost": 10.97,
+        "status": "Ordered"
+    },
+    "PO005": {
+        "ponumber": "PO005",
+        "vendor_id": "V006",
+        "date_created": "05-11-2026",
+        "ids_ordered": [
+            "P025"
+        ],
+        "items_ordered": 15,
+        "total_cost": 70.0,
+        "status": "Ordered"
+    },
+    "PO006": {
+        "ponumber": "PO006",
+        "vendor_id": "V002",
+        "date_created": "05-12-2026",
+        "ids_ordered": [
+            "P010",
+            "P009"
+        ],
+        "items_ordered": 15,
+        "total_cost": 430.0,
+        "status": "Ordered"
+    },
+    "PO007": {
+        "ponumber": "PO007",
+        "vendor_id": "V003",
+        "date_created": "05-12-2026",
+        "ids_ordered": [
+            "P011"
+        ],
+        "items_ordered": 60,
+        "total_cost": 22.0,
+        "status": "Ordered"
+    },
+    "PO008": {
+        "ponumber": "PO008",
+        "vendor_id": "V002",
+        "date_created": "05-13-2026",
+        "ids_ordered": [
+            "P008",
+            "P007"
+        ],
+        "items_ordered": 20,
+        "total_cost": 270.0,
         "status": "Ordered"
     }
 }
